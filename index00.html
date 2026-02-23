@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I'm Sorry ❤️</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ffc0d9,#ffffff);
+text-align:center;
+overflow-x:hidden;
+}
+
+/* Pages */
+
+.page{
+display:none;
+padding:40px 20px;
+min-height:100vh;
+}
+
+.active{
+display:block;
+}
+
+/* Flying Letter */
+
+.letterBox{
+margin-top:120px;
+cursor:pointer;
+}
+
+.letter{
+font-size:90px;
+animation:fly 3s infinite ease-in-out;
+display:inline-block;
+}
+
+.wings{
+font-size:40px;
+position:relative;
+top:-20px;
+animation:wing 0.6s infinite alternate;
+}
+
+@keyframes fly{
+0%{transform:translateY(0)}
+50%{transform:translateY(-30px)}
+100%{transform:translateY(0)}
+}
+
+@keyframes wing{
+from{transform:rotate(-10deg)}
+to{transform:rotate(10deg)}
+}
+
+.openText{
+font-size:18px;
+color:#ff2e88;
+margin-top:10px;
+}
+
+/* Content */
+
+h1{
+color:#ff2e88;
+}
+
+p{
+max-width:600px;
+margin:auto;
+font-size:18px;
+color:#444;
+line-height:1.6;
+}
+
+img{
+max-width:260px;
+border-radius:16px;
+margin:15px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Button */
+
+button{
+background:#ff4fa3;
+color:white;
+border:none;
+padding:14px 30px;
+font-size:17px;
+border-radius:40px;
+cursor:pointer;
+margin-top:25px;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.07);
+background:#ff2e88;
+}
+
+/* gallery */
+
+.gallery{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+/* gif */
+
+.gif{
+width:220px;
+border-radius:14px;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+
+<div class="page active" id="p1">
+
+<div class="letterBox" onclick="openLetter()">
+
+<span class="wings">🪽</span>
+<span class="letter">💌</span>
+<span class="wings">🪽</span>
+
+<div class="openText">Tap to open your letter</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 2 -->
+
+<div class="page" id="p2">
+
+<h1>I'm Really Sorry ❤️</h1>
+
+<img class="gif" src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyZHJlMWVwZm1vcnlxb3N6cW91ZGkwaWpud3R1MnZsd3MwM2d0MW15diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/PX6E0iX4x1O7fQ4pgt/giphy.gif">
+
+<br>
+
+<img src="pic1.png">
+
+<p>
+
+Mujhe pata hai tum gussa ho…  
+Aur honestly mujhe bhi acha nahi lag raha.
+
+Video call mana karna shayad stupid tha.
+
+Par tum mere liye important ho,
+isliye ye choti si website banayi hai
+sirf tumhe manane ke liye.
+
+Please gussa thoda kam karo 🥺
+
+</p>
+
+<button onclick="nextPage()">Ok theek hai maaf kiya 💗</button>
+
+</div>
+
+
+<!-- PAGE 3 -->
+
+<div class="page" id="p3">
+
+<h1>The Most Beautiful Girl 🌸</h1>
+
+<div class="gallery">
+<img src="pic2.png">
+<img src="pic3.png">
+</div>
+
+<p>
+
+Sach bolu toh…
+
+Tum sirf meri girlfriend nahi ho  
+tum meri favourite notification ho.
+
+Aur haan...
+
+Tumhari smile >>> duniya ki sab cheeze.
+
+Ab please gussa band karo 😭❤️
+
+</p>
+
+</div>
+
+
+<script>
+
+function openLetter(){
+document.getElementById("p1").classList.remove("active");
+document.getElementById("p2").classList.add("active");
+}
+
+function nextPage(){
+document.getElementById("p2").classList.remove("active");
+document.getElementById("p3").classList.add("active");
+}
+
+</script>
+
+</body>
+</html>
